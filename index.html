@@ -26,7 +26,17 @@
                     <a class="nav-link font-weight-bold text-dark" href="#What_can_PHP_do?">What can PHP do?</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link font-weight-bold text-dark" href="#Basic_Syntax">Basic Syntax</a>
+                    <a class="nav-link font-weight-bold text-dark" href="#PHP_Tags">PHP Tags</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link font-weight-bold text-dark" href="#Escaping_from_HTML">Escaping from HTML</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link font-weight-bold text-dark" href="#Instruction_separation">Instruction
+                        separation</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link font-weight-bold text-dark" href="#Comments">Comments</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link font-weight-bold text-dark" href="#Types">Types</a>
@@ -43,11 +53,53 @@
                 <li class="nav-item">
                     <a class="nav-link font-weight-bold text-dark" href="#Operators">Operators</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link font-weight-bold text-dark" href="#Control_Structures">Control Structures</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link font-weight-bold text-dark" href="#Functions">Functions</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link font-weight-bold text-dark" href="#Classes_and_Objects">Classes and Objects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link font-weight-bold text-dark" href="#Namespaces">Namespaces</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link font-weight-bold text-dark" href="#Errors">Errors</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link font-weight-bold text-dark" href="#Exceptions">Exceptions</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link font-weight-bold text-dark" href="#Generators">Generators</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link font-weight-bold text-dark" href="#References_Explained">References Explained</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link font-weight-bold text-dark" href="#Predefined_Variables">Predefined Variables</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link font-weight-bold text-dark" href="#Predefined_Exceptions">Predefined Exceptions</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link font-weight-bold text-dark" href="#Predefined_Interfaces_and_Classes">Predefined
+                        Interfaces and Classes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link font-weight-bold text-dark" href="#Context_options_and_parameters">Context
+                        options and parameters</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link font-weight-bold text-dark" href="#Supported_Protocols_and_Wrappers">Supported
+                        Protocols and Wrappers</a>
+                </li>
             </ul>
         </nav>
         <main id="main-doc" class="col-md-9">
             <section class="main-section" id="What_is_PHP?">
-                <header class="font-weight-bold">What is PHP?</header>
+                <header class="font-weight-bold pt-3">What is PHP?</header>
                 <hr>
                 <article>
                     <p><acronym title="PHP: Hypertext Preprocessor">PHP</acronym> (recursive acronym for <em>PHP:
@@ -81,7 +133,7 @@
 
             </section>
             <section class="main-section" id="What_can_PHP_do?">
-                <header class="font-weight-bold">What can PHP do?</header>
+                <header class="font-weight-bold pt-3">What can PHP do?</header>
                 <hr>
                 <article>
                     <p>
@@ -134,11 +186,10 @@
                     </p>
                 </article>
             </section>
-            <section class="main-section" id="Basic_Syntax">
-                <header class="font-weight-bold">Basic Syntax</header>
+            <section class="main-section" id="PHP_Tags">
+                <header class="font-weight-bold pt-3">PHP Tags</header>
                 <hr>
                 <article>
-                    <header>PHP Tags</header>
                     <p>
                         When PHP parses a file, it looks for opening and closing tags, which are
                         <em>&lt;?php</em> and <em>?&gt;</em> which tell PHP to
@@ -161,40 +212,235 @@
                         being added after the PHP closing tag, which may cause unwanted effects
                         because PHP will start output buffering when there is no intention from
                         the programmer to send any output at that point in the script.
-                        <br>
-                        <code>
-                            <span style="color: #000000">
-                                <span style="color: #0000BB">&lt;?php<br /></span><span style="color: #007700">echo&nbsp;</span><span
-                                    style="color: #DD0000">"Hello&nbsp;world"</span><span style="color: #007700">;<br /><br /></span><span
-                                    style="color: #FF8000">//&nbsp;...&nbsp;more&nbsp;code<br /><br /></span><span
-                                    style="color: #007700">echo&nbsp;</span><span style="color: #DD0000">"Last&nbsp;statement"</span><span
-                                    style="color: #007700">;<br /><br /></span><span style="color: #FF8000">//&nbsp;the&nbsp;script&nbsp;ends&nbsp;here&nbsp;with&nbsp;no&nbsp;PHP&nbsp;closing&nbsp;tag</span>
-                            </span>
-                        </code>
+                        <div class="card">
+                            <code>
+                                <span style="color: #000000">
+                                    <span style="color: #0000BB">&lt;?php<br /></span><span style="color: #007700">echo&nbsp;</span><span
+                                        style="color: #DD0000">"Hello&nbsp;world"</span><span style="color: #007700">;<br /><br /></span><span
+                                        style="color: #FF8000">//&nbsp;...&nbsp;more&nbsp;code<br /><br /></span><span
+                                        style="color: #007700">echo&nbsp;</span><span style="color: #DD0000">"Last&nbsp;statement"</span><span
+                                        style="color: #007700">;<br /><br /></span><span style="color: #FF8000">//&nbsp;the&nbsp;script&nbsp;ends&nbsp;here&nbsp;with&nbsp;no&nbsp;PHP&nbsp;closing&nbsp;tag</span>
+                                </span>
+                            </code>
+                        </div>
+
                     </p>
                 </article>
             </section>
-            <section class="main-section" id="Types">
-                <header class="font-weight-bold">Types</header>
+            <section class="main-section" id="Escaping_from_HTML">
+                <header class="font-weight-bold pt-3">Escaping from HTML</header>
                 <hr>
+                <article>
+                    <p>
+                        Everything outside of a pair of opening and closing tags is ignored by the
+                        PHP parser which allows PHP files to have mixed content. This allows PHP
+                        to be embedded in HTML documents, for example to create templates.
+                        <div class="card">
+                            <code>
+                                <span style="color: #000000">
+                                    &lt;p&gt;This&nbsp;is&nbsp;going&nbsp;to&nbsp;be&nbsp;ignored&nbsp;by&nbsp;PHP&nbsp;and&nbsp;displayed&nbsp;by&nbsp;the&nbsp;browser.&lt;/p&gt;<br /><span
+                                        style="color: #0000BB">&lt;?php&nbsp;</span><span style="color: #007700">echo&nbsp;</span><span
+                                        style="color: #DD0000">'While&nbsp;this&nbsp;is&nbsp;going&nbsp;to&nbsp;be&nbsp;parsed.'</span><span
+                                        style="color: #007700">;&nbsp;</span><span style="color: #0000BB">?&gt;<br /></span>&lt;p&gt;This&nbsp;will&nbsp;also&nbsp;be&nbsp;ignored&nbsp;by&nbsp;PHP&nbsp;and&nbsp;displayed&nbsp;by&nbsp;the&nbsp;browser.&lt;/p&gt;
+                                </span>
+                            </code>
+                        </div>
+
+                    </p>
+                </article>
+            </section>
+            <section class="main-section" id="Instruction_separation">
+                <header class="font-weight-bold pt-3">Instruction separation</header>
+                <hr>
+                <article>
+                    <p>
+                        As in C or Perl, PHP requires instructions to be terminated
+                        with a semicolon at the end of each statement. The closing tag
+                        of a block of PHP code automatically implies a semicolon; you
+                        do not need to have a semicolon terminating the last line of a
+                        PHP block. The closing tag for the block will include the immediately
+                        trailing newline if one is present.
+                    </p>
+                    <div class="card">
+                        <code>
+                            <span style="color: #000000">
+                                <span style="color: #0000BB">&lt;?php<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">echo&nbsp;</span><span
+                                    style="color: #DD0000">'This&nbsp;is&nbsp;a&nbsp;test'</span><span style="color: #007700">;<br /></span><span
+                                    style="color: #0000BB">?&gt;<br /></span><br /><span style="color: #0000BB">&lt;?php&nbsp;</span><span
+                                    style="color: #007700">echo&nbsp;</span><span style="color: #DD0000">'This&nbsp;is&nbsp;a&nbsp;test'&nbsp;</span><span
+                                    style="color: #0000BB">?&gt;<br /></span><br /><span style="color: #0000BB">&lt;?php&nbsp;</span><span
+                                    style="color: #007700">echo&nbsp;</span><span style="color: #DD0000">'We&nbsp;omitted&nbsp;the&nbsp;last&nbsp;closing&nbsp;tag'</span><span
+                                    style="color: #007700">;</span>
+                            </span>
+                        </code>
+                    </div>
+                    <blockquote>
+                        <p><strong>Note</strong>:
+                            <p>
+                                The closing tag of a PHP block at the end of a file is optional,
+                                and in some cases omitting it is helpful when using <span><a href="function.include.php">include</a></span>
+                                or <span><a href="function.require.php">require</a></span>, so unwanted whitespace will
+                                not occur at the end of files, and you will still be able to add
+                                headers to the response later. It is also handy if you use output
+                                buffering, and would not like to see added unwanted whitespace
+                                at the end of the parts generated by the included files.
+                            </p>
+                        </p>
+                    </blockquote>
+                </article>
+            </section>
+            <section class="main-section" id="Comments">
+                <header class="font-weight-bold pt-3">Comments</header>
+                <hr>
+                <article>
+                    <p>
+                        PHP supports &#039;C&#039;, &#039;C++&#039; and Unix shell-style (Perl style) comments. For
+                        example:
+                    </p>
+                    <div class="card">
+                        <code>
+                            <span style="color: #000000">
+                                <span style="color: #0000BB">&lt;?php<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">echo&nbsp;</span><span
+                                    style="color: #DD0000">'This&nbsp;is&nbsp;a&nbsp;test'</span><span style="color: #007700">;&nbsp;</span><span
+                                    style="color: #FF8000">//&nbsp;This&nbsp;is&nbsp;a&nbsp;one-line&nbsp;c++&nbsp;style&nbsp;comment<br />&nbsp;&nbsp;&nbsp;&nbsp;/*&nbsp;This&nbsp;is&nbsp;a&nbsp;multi&nbsp;line&nbsp;comment<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;yet&nbsp;another&nbsp;line&nbsp;of&nbsp;comment&nbsp;*/<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+                                    style="color: #007700">echo&nbsp;</span><span style="color: #DD0000">'This&nbsp;is&nbsp;yet&nbsp;another&nbsp;test'</span><span
+                                    style="color: #007700">;<br />&nbsp;&nbsp;&nbsp;&nbsp;echo&nbsp;</span><span style="color: #DD0000">'One&nbsp;Final&nbsp;Test'</span><span
+                                    style="color: #007700">;&nbsp;</span><span style="color: #FF8000">#&nbsp;This&nbsp;is&nbsp;a&nbsp;one-line&nbsp;shell-style&nbsp;comment<br /></span><span
+                                    style="color: #0000BB">?&gt;</span>
+                            </span>
+                        </code>
+                    </div>
+                    <p>
+                        The &quot;one-line&quot; comment styles only comment to the end of
+                        the line or the current block of PHP code, whichever comes first.
+                        This means that HTML code after <em>// ... ?&gt;</em>
+                        or <em># ... ?&gt;</em> WILL be printed:
+                        ?&gt; breaks out of PHP mode and returns to HTML mode, and
+                        <em>//</em> or <em>#</em> cannot influence that.
+                        If the <a href="ini.core.php#ini.asp-tags" class="link">asp_tags</a> configuration directive
+                        is enabled, it behaves the same with <em>// %&gt;</em> and
+                        <em># %&gt;</em>.
+                        However, the <em>&lt;/script&gt;</em> tag doesn&#039;t break out of PHP mode in
+                        a one-line comment.
+                    </p>
+                    <div class="card">
+                        <code>
+                            <span style="color: #000000">
+                                &lt;h1&gt;This&nbsp;is&nbsp;an&nbsp;<span style="color: #0000BB">&lt;?php&nbsp;</span><span
+                                    style="color: #FF8000">#&nbsp;echo&nbsp;'simple';</span><span style="color: #0000BB">?&gt;</span>&nbsp;example&lt;/h1&gt;<br />&lt;p&gt;The&nbsp;header&nbsp;above&nbsp;will&nbsp;say&nbsp;'This&nbsp;is&nbsp;an&nbsp;&nbsp;example'.&lt;/p&gt;
+                            </span>
+                        </code>
+                    </div>
+                </article>
+            </section>
+            <section class="main-section" id="Types">
+                <header class="font-weight-bold pt-3">Types</header>
+                <hr>
+                <article>
+                    <p>PHP supports ten primitive types.</p>
+                    <p>Four scalar types:</p>
+                    <ul>
+                        <li>boolean</li>
+                        <li>integer</li>
+                        <li>float (floating-point number, aka double)</li>
+                        <li>string</li>
+                    </ul>
+                    <p>Four compound types:</p>
+                    <ul>
+                        <li>array</li>
+                        <li>object</li>
+                        <li>callable</li>
+                        <li>iterable</li>
+                    </ul>
+                    <p>And finally two special types:</p>
+                    <ul>
+                        <li>resource</li>
+                        <li>NULL</li>
+                    </ul>
+                </article>
             </section>
             <section class="main-section" id="Variables">
-                <header class="font-weight-bold">Variables</header>
+                <header class="font-weight-bold pt-3">Variables</header>
                 <hr>
 
             </section>
             <section class="main-section" id="Constants">
-                <header class="font-weight-bold">Constants</header>
+                <header class="font-weight-bold pt-3">Constants</header>
                 <hr>
 
             </section>
             <section class="main-section" id="Expressions">
-                <header class="font-weight-bold">Expressions</header>
+                <header class="font-weight-bold pt-3">Expressions</header>
                 <hr>
 
             </section>
             <section class="main-section" id="Operators">
-                <header class="font-weight-bold">Operators</header>
+                <header class="font-weight-bold pt-3">Operators</header>
+                <hr>
+
+            </section>
+            <section class="main-section" id="Control_Structures">
+                <header class="font-weight-bold pt-3">Control Structures</header>
+                <hr>
+
+            </section>
+            <section class="main-section" id="Functions">
+                <header class="font-weight-bold pt-3">Functions</header>
+                <hr>
+
+            </section>
+            <section class="main-section" id="Classes_and_Objects">
+                <header class="font-weight-bold pt-3">Classes and Objects</header>
+                <hr>
+
+            </section>
+            <section class="main-section" id="Namespaces">
+                <header class="font-weight-bold pt-3">Namespaces</header>
+                <hr>
+
+            </section>
+            <section class="main-section" id="Errors">
+                <header class="font-weight-bold pt-3">Errors</header>
+                <hr>
+
+            </section>
+            <section class="main-section" id="Exceptions">
+                <header class="font-weight-bold pt-3">Exceptions</header>
+                <hr>
+
+            </section>
+            <section class="main-section" id="Generators">
+                <header class="font-weight-bold pt-3">Generators</header>
+                <hr>
+
+            </section>
+            <section class="main-section" id="References_Explained">
+                <header class="font-weight-bold pt-3">References Explained</header>
+                <hr>
+
+            </section>
+            <section class="main-section" id="Predefined_Variables">
+                <header class="font-weight-bold pt-3">Predefined Variables</header>
+                <hr>
+
+            </section>
+            <section class="main-section" id="Predefined_Exceptions">
+                <header class="font-weight-bold pt-3">Predefined Exceptions</header>
+                <hr>
+
+            </section>
+            <section class="main-section" id="Predefined_Interfaces_and_Classes">
+                <header class="font-weight-bold pt-3">Predefined Interfaces and Classes</header>
+                <hr>
+
+            </section>
+            <section class="main-section" id="Context_options_and_parameters">
+                <header class="font-weight-bold pt-3">Context options and parameters</header>
+                <hr>
+
+            </section>
+            <section class="main-section" id="Supported_Protocols_and_Wrappers">
+                <header class="font-weight-bold pt-3">Supported Protocols and Wrappers</header>
                 <hr>
 
             </section>

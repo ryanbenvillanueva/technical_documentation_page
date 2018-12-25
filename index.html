@@ -18,7 +18,7 @@
     <div class="row">
         <nav class="col-md-3" id="navbar">
             <header class="lead font-weight-bold">PHP Documentation</header>
-            <ul class="navbar flex-column navbar-expand-sm">
+            <ul class="navbar flex-column navbar-expand-sm list-unstyled">
                 <li class="nav-item">
                     <a class="nav-link font-weight-bold text-dark" href="#What_is_PHP?">What is PHP?</a>
                 </li>
@@ -48,6 +48,7 @@
         <main id="main-doc" class="col-md-9">
             <section class="main-section" id="What_is_PHP?">
                 <header class="font-weight-bold">What is PHP?</header>
+                <hr>
                 <article>
                     <p><acronym title="PHP: Hypertext Preprocessor">PHP</acronym> (recursive acronym for <em>PHP:
                             Hypertext
@@ -74,13 +75,14 @@
                         code is
                         enclosed in special start and end processing instructions <code class="code">&lt;?php</code>
                         and
-                        <code class="code">?&gt;</code> that allow you to jump into and out of "PHP mode."
+                        <code>?&gt;</code> that allow you to jump into and out of "PHP mode."
                     </p>
                 </article>
 
             </section>
             <section class="main-section" id="What_can_PHP_do?">
                 <header class="font-weight-bold">What can PHP do?</header>
+                <hr>
                 <article>
                     <p>
                         Anything. PHP is mainly focused on server-side scripting,
@@ -133,22 +135,68 @@
                 </article>
             </section>
             <section class="main-section" id="Basic_Syntax">
-                <header>Basic Syntax</header>
+                <header class="font-weight-bold">Basic Syntax</header>
+                <hr>
+                <article>
+                    <header>PHP Tags</header>
+                    <p>
+                        When PHP parses a file, it looks for opening and closing tags, which are
+                        <em>&lt;?php</em> and <em>?&gt;</em> which tell PHP to
+                        start and stop interpreting the code between them. Parsing in this manner
+                        allows PHP to be embedded in all sorts of different documents, as
+                        everything outside of a pair of opening and closing tags is ignored by the
+                        PHP parser.
+                    </p>
+                    <p>
+                        PHP also allows for short open tag <em>&lt;?</em> (which is
+                        discouraged since it is only available if enabled using the
+                        short_open_tagphp.ini
+                        configuration file directive, or if PHP was configured with the
+                        <strong>--enable-short-tags</strong>
+                        option).
+                    </p>
+                    <p>
+                        If a file contains only PHP code, it is preferable to omit the PHP closing tag
+                        at the end of the file. This prevents accidental whitespace or new lines
+                        being added after the PHP closing tag, which may cause unwanted effects
+                        because PHP will start output buffering when there is no intention from
+                        the programmer to send any output at that point in the script.
+                        <br>
+                        <code>
+                            <span style="color: #000000">
+                                <span style="color: #0000BB">&lt;?php<br /></span><span style="color: #007700">echo&nbsp;</span><span
+                                    style="color: #DD0000">"Hello&nbsp;world"</span><span style="color: #007700">;<br /><br /></span><span
+                                    style="color: #FF8000">//&nbsp;...&nbsp;more&nbsp;code<br /><br /></span><span
+                                    style="color: #007700">echo&nbsp;</span><span style="color: #DD0000">"Last&nbsp;statement"</span><span
+                                    style="color: #007700">;<br /><br /></span><span style="color: #FF8000">//&nbsp;the&nbsp;script&nbsp;ends&nbsp;here&nbsp;with&nbsp;no&nbsp;PHP&nbsp;closing&nbsp;tag</span>
+                            </span>
+                        </code>
+                    </p>
+                </article>
             </section>
             <section class="main-section" id="Types">
-                <header>Types</header>
+                <header class="font-weight-bold">Types</header>
+                <hr>
             </section>
             <section class="main-section" id="Variables">
-                <header>Variables</header>
+                <header class="font-weight-bold">Variables</header>
+                <hr>
+
             </section>
             <section class="main-section" id="Constants">
-                <header>Constants</header>
+                <header class="font-weight-bold">Constants</header>
+                <hr>
+
             </section>
             <section class="main-section" id="Expressions">
-                <header>Expressions</header>
+                <header class="font-weight-bold">Expressions</header>
+                <hr>
+
             </section>
             <section class="main-section" id="Operators">
-                <header>Operators</header>
+                <header class="font-weight-bold">Operators</header>
+                <hr>
+
             </section>
 
 
